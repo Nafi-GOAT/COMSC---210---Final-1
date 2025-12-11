@@ -32,5 +32,20 @@ for (auto it = traffic.begin(); it != traffic.end(); ++it) {
 }
 cout << endl;
 
+int maxcount = 0;
+for (auto it = traffic.begin(); it != traffic.end(); ++it) {
+    if (it->second > maxcount) {
+        maxcount = it->second;
+    }
+}
+
+cout << "Busiest airport(s) with traffic count : " << maxcount << ":" << endl;
+for (auto it = traffic.begin(); it != traffic.end(); ++it) {
+    if (it->second == maxcount) {
+        cout << it->first << endl;
+    }
+}
+cout << endl;
+
 return 0;
 }
