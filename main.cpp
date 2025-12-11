@@ -10,6 +10,7 @@
 #include <map>
 using namespace std;
 
+//Milestone 3
 void printAirportsInRange(const map<string, int>& traffic, int low, int high) {
     cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
     for (auto it = traffic.begin(); it != traffic.end(); ++it) {
@@ -21,10 +22,12 @@ void printAirportsInRange(const map<string, int>& traffic, int low, int high) {
 }
 
 int main() {
+
+    //Mileston 1
     map<string, int > traffic;
     
     ifstream infile("210-final-1-FA25.txt");
-    if(!infile){
+    if (!infile){
         cout << "Error opening file." << endl;
         return 1;
     }
@@ -42,6 +45,7 @@ for (auto it = traffic.begin(); it != traffic.end(); ++it) {
 }
 cout << endl;
 
+// Milestone 2
 int maxcount = 0;
 for (auto it = traffic.begin(); it != traffic.end(); ++it) {
     if (it->second > maxcount) {
