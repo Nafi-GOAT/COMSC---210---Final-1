@@ -14,7 +14,7 @@ void printAirportsInRange(const map<string, int>& traffic, int low, int high) {
     cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
     for (auto it = traffic.begin(); it != traffic.end(); ++it) {
         if (it->second >= low && it->second <= high) {
-            cout << it->first << " " << " Traffic Count: " << it->second << endl;
+            cout << it->first << " " << it->second << endl;
         }
     }
     cout << endl;
@@ -56,6 +56,9 @@ for (auto it = traffic.begin(); it != traffic.end(); ++it) {
     }
 }
 cout << endl;
+
+printAirportsInRange(traffic, 5, 8);
+printAirportsInRange(traffic, 9, 12);
 
 return 0;
 }
