@@ -28,7 +28,7 @@ int main() {
 
 cout << "All airports and their traffic counts: "<< endl;
 for (auto it = traffic.begin(); it != traffic.end(); ++it) {
-    cout << it->first << " " << ", Traffic Count: " << it->second << endl;
+    cout << it->first << " " << " Traffic Count: " << it->second << endl;
 }
 cout << endl;
 
